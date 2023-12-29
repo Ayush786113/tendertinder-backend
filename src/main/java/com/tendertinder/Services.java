@@ -9,6 +9,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 @Service
@@ -77,6 +78,12 @@ public class Services implements ServiceCallback{
             }
             people.add(person);
         }
+        people.sort(new Comparator<Person>() {
+            @Override
+            public int compare(Person person, Person t1) {
+                return person.id.compareTo(t1.id);
+            }
+        });
         return people;
     }
     synchronized public Object myLikes(String token) throws Exception{
