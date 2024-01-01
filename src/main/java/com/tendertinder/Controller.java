@@ -39,12 +39,4 @@ public class Controller {
             return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
-    @GetMapping(path = {"/matches"}, params = {"token"})
-    public ResponseEntity<Object> myMatches(@RequestParam String token){
-        try{
-            return new ResponseEntity<>(services.myMatches(token), HttpStatus.OK);
-        } catch (Exception exception){
-            return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
-        }
-    }
 }

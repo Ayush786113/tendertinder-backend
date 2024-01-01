@@ -68,8 +68,6 @@ public class Recommendations implements Runnable, Callback {
 //                System.exit(1);
 //            }
         for(Result result : recsResponse.data.results){
-            if(result.user.name.equalsIgnoreCase("uma"))
-                System.out.println(result);
             Person person = new Person();
             person.setId(result.user._id.trim());
             person.setName(result.user.name.trim());

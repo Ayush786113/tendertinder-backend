@@ -144,11 +144,6 @@ public class Services implements ServiceCallback{
         }
         return people;
     }
-    synchronized public Object myMatches(String token){
-        Thread thread = new Thread(new Recommendations(token));
-        thread.start();
-        return null;
-    }
 
     @Override
     synchronized public void result(Object data) {
