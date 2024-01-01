@@ -36,7 +36,6 @@ class Appwrite {
                     user,
                     listOf(Query.equal("id", person.id))
                 )
-                println(result.total.toInt())
                 if(result.total.toInt() == 0){
                     databases.createDocument(
                         database,
@@ -59,7 +58,7 @@ class Appwrite {
                 val data: DocumentList<Map<String, Any>> = databases.listDocuments(
                     database,
                     user,
-                    listOf(Query.limit(1000))
+//                    listOf(Query.limit(1000))
                 )
                 var list: LinkedList<Person> = LinkedList()
                 for(user in data.documents){
