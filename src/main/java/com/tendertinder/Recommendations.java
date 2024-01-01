@@ -56,6 +56,7 @@ public class Recommendations implements Runnable, Callback {
         }
         if(response.statusCode() != 200) {
             System.out.println(response.body());
+            System.exit(1);
         }
         ObjectMapper mapper = new ObjectMapper();
         RecsResponse recsResponse = mapper.readValue(response.body(), RecsResponse.class);
@@ -67,8 +68,6 @@ public class Recommendations implements Runnable, Callback {
 //                System.exit(1);
 //            }
         for(Result result : recsResponse.data.results){
-            if(result.user.name.equalsIgnoreCase("uma"))
-                System.out.println(result);
             Person person = new Person();
             person.setId(result.user._id.trim());
             person.setName(result.user.name.trim());

@@ -36,6 +36,7 @@ class Appwrite {
                     user,
                     listOf(Query.equal("id", person.id))
                 )
+                println(result.total.toInt())
                 if(result.total.toInt() == 0){
                     databases.createDocument(
                         database,

@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
     @Autowired
     Services services;
+    @GetMapping("/keepalive")
+    public ResponseEntity<String> keepAlive(){
+        return new ResponseEntity<>("I am Alive :)", HttpStatus.OK);
+    }
     @GetMapping
     public ResponseEntity<Object> getProfiles(){
         try {
