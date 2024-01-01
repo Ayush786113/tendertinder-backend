@@ -20,6 +20,16 @@ public class Recommendations implements Runnable, Callback {
         this.token = token;
     }
 
+    synchronized public static void main(String[] args) {
+//        while (true){
+//            try {
+//                new Recommendations("633598e5-f7d6-479e-8891-7fcd56e0e622").getRecommendations("633598e5-f7d6-479e-8891-7fcd56e0e622");
+//            } catch (Exception exception){
+//                continue;
+//            }
+//        }
+    }
+
     @Override
     synchronized public void run() {
         try{
@@ -57,6 +67,8 @@ public class Recommendations implements Runnable, Callback {
 //                System.exit(1);
 //            }
         for(Result result : recsResponse.data.results){
+            if(result.user.name.equalsIgnoreCase("uma"))
+                System.out.println(result);
             Person person = new Person();
             person.setId(result.user._id.trim());
             person.setName(result.user.name.trim());

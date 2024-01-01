@@ -331,7 +331,7 @@ class Title{
 class UiConfiguration{
     public IdToComponentMap id_to_component_map;
 }
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 class User{
     public String _id;
     public ArrayList<Badge> badges;
