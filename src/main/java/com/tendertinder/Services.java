@@ -145,6 +145,25 @@ public class Services implements ServiceCallback{
         return people;
     }
 
+    synchronized public Object searchByName(String name) throws Exception{
+        appwrite.searchByName(this, name);
+        wait();
+        return data;
+    }
+    synchronized public Object searchByGender(String gender) throws Exception{
+        if(gender.equalsIgnoreCase("male"))
+            appwrite.searchByGender(this, 0);
+        else if(gender.equalsIgnoreCase("female"))
+            appwrite.searchByGender(this, 1);
+        wait();
+        return data;
+    }
+    synchronized public Object searchByCity(String city) throws Exception{
+        appwrite.searchByCity(this,city);
+        wait();
+        return data;
+    }
+
     @Override
     synchronized public void result(Object data) {
         this.data = data;

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tendertinder.TendertinderApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.087 s -- in com.tendertinder.TendertinderApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.775 s -- in com.tendertinder.TendertinderApplicationTests

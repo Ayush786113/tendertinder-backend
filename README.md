@@ -21,6 +21,36 @@ The deployed API can be found [here](https://tendertinder.onrender.com/)
   GET /
 ```
 
+#### Search accounts by name
+
+```http
+  GET /name=[name]
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `name`      | `string` |  search by name |
+
+#### Search accounts by gender
+
+```http
+  GET /gender=[gender]
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `gender`      | `string` |  search by gender (male/female) |
+
+#### Search accounts by city
+
+```http
+  GET /city=[city]
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `city`      | `string` |  search by city |
+
 #### Get recommendations tailored for you by Tinder
 
 ```http

@@ -39,4 +39,28 @@ public class Controller {
             return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
+    @GetMapping(params = {"name"})
+    public ResponseEntity<Object> searchByName(@RequestParam String name){
+        try{
+            return new ResponseEntity<>(services.searchByName(name), HttpStatus.OK);
+        } catch (Exception exception){
+            return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
+    @GetMapping(params = {"gender"})
+    public ResponseEntity<Object> searchByGender(@RequestParam String gender){
+        try{
+            return new ResponseEntity<>(services.searchByGender(gender), HttpStatus.OK);
+        } catch (Exception exception){
+            return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
+    @GetMapping(params = {"city"})
+    public ResponseEntity<Object> searchByCity(@RequestParam String city){
+        try{
+            return new ResponseEntity<>(services.searchByCity(city), HttpStatus.OK);
+        } catch (Exception exception){
+            return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
 }

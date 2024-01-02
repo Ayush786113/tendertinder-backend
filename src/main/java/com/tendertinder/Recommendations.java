@@ -23,7 +23,7 @@ public class Recommendations implements Runnable, Callback {
     synchronized public static void main(String[] args) {
 //        while (true){
 //            try {
-//                new Recommendations("633598e5-f7d6-479e-8891-7fcd56e0e622").getRecommendations("633598e5-f7d6-479e-8891-7fcd56e0e622");
+//                new Recommendations("633598e5-f7d6-479e-8891-7fcd56e0e622").getRecommendations("74c0db65-df8d-494c-be89-938c43985b4e");
 //            } catch (Exception exception){
 //                continue;
 //            }
@@ -68,6 +68,7 @@ public class Recommendations implements Runnable, Callback {
 //                System.exit(1);
 //            }
         for(Result result : recsResponse.data.results){
+            // 3df59a05-96c6-4fc1-bc7a-26a5941ed397
             Person person = new Person();
             person.setId(result.user._id.trim());
             person.setName(result.user.name.trim());
