@@ -18,15 +18,15 @@ import kotlin.system.exitProcess
 @Component
 class Appwrite {
     val client: Client = Client()
-        .setProject("658c87ce373ca5b6f199")
-        .setKey("[APPWRITE-API-KEY]")
-        .setEndpoint("https://cloud.appwrite.io/v1")
+        .setProject(Constants.PROJECT)
+        .setKey(Constants.API)
+        .setEndpoint(Constants.ENDPOINT)
 
     val databases: Databases = Databases(client)
 
-    val database: String = "658c88723a3ad5085092"
-    val user: String = "658c8879b81581684dae"
-    val profile: String = "658c88800de9d48dc39b"
+    val database: String = Constants.DATABASE
+    val user: String = Constants.USER
+    val profile: String = Constants.PROFILE
 
     fun writeRecommendation(callbacks: Callback, person: Person){
         GlobalScope.launch {
