@@ -19,7 +19,7 @@ import kotlin.system.exitProcess
 class Appwrite {
     val client: Client = Client()
         .setProject("658c87ce373ca5b6f199")
-        .setKey("a942436a74cec7f40a8018b8d147923584c588d1de7fb4a83e6d3cad38aa0316115e5eba996badb72b7a30f46ab01c6b6686106087913d76f57cac811adf36ef7931ce0a522740b6c79e20b2799bc9151d779c653029dd955999dc6e9fa88908e1eaac8091c56bd6ed6e52e6cbc1093bf2e348d703db7987ae05ddeb28cc594c")
+        .setKey("[APPWRITE-API-KEY]")
         .setEndpoint("https://cloud.appwrite.io/v1")
 
     val databases: Databases = Databases(client)
